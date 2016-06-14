@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Desktop/Edison/iotdk-ide-win/devkit-x86/sysroots/i586-poky-linux/usr/lib/java/mraa.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/csn-agent-0.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/jackson-annotations-2.4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/jackson-core-2.4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/jackson-databind-2.4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/logback-classic-1.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/logback-core-1.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/pi4j-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/pi4j-device.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/pi4j-gpio-extension.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/pi4j-service.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Dropbox/研究所研究内容/Sensor Pod/150216-SensorPod-raw/lib/sqlite-jdbc-3.7.15-SNAPSHOT-ARM.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Desktop/Edison/java/upm_grove.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Park/Desktop/Edison/java/upm_ttp223.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
