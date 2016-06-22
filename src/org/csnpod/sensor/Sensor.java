@@ -26,6 +26,7 @@ public class Sensor extends Thread {
 	private SensorDataParser parser;
 //	private String SensorType;
 //	private int port;
+	int flag = 0;
 	private boolean abort = false; // Flag in case of abort
 
 	public Sensor(String name, String SensorType, int port,
@@ -54,7 +55,7 @@ public class Sensor extends Thread {
 
 		logger.info("Connect to Sensor Stream");
 		// stream.connectSensorStream(physicalInfo.getSensorType(),physicalInfo.getPort());
-		int flag = 0;
+		
 		while (true) {
 
 			if (flag != 0) {
@@ -62,9 +63,9 @@ public class Sensor extends Thread {
 						physicalInfo.getPeriod());
 				Uninterruptibles.sleepUninterruptibly(physicalInfo.getPeriod(),
 						TimeUnit.SECONDS);
-				flag = 1;
+				
 			}
-			
+			flag = 1;
 			
 //			if delay 30 min the first 30 min didn't have data so we use flag to deal with this.
 			synchronized (this) {
