@@ -11,7 +11,8 @@ public class SensorStream {
 	private upm_grove.GroveTemp temp;
 	private upm_grove.GroveLight light;
 	private upm_ttp223.TTP223 touch;
-
+	private upm_grove.GroveRotary rotary;
+	private upm_grove.GroveButton button;
 	public SensorStream(String SensorType, int port) {
 		super();
 
@@ -21,9 +22,14 @@ public class SensorStream {
 			temp = new upm_grove.GroveTemp(port);
 		} else if (SensorType.equals("upm_ttp223.TTP223")) {
 			touch = new upm_ttp223.TTP223(port);
-		} else {
+		} else if (SensorType.equals("upm_grove.GroveRotary")){
+			rotary = new upm_grove.GroveRotary(port);
+		}else if (SensorType.equals("upm_grove.GroveButton")){
+			button = new upm_grove.GroveButton(port);
+		}else{
 			logger.error("Do not hava " + SensorType + " sensor");
 		}
+		
 	}
 
 	public String readLine(String SensorType, int period)
@@ -42,6 +48,10 @@ public class SensorStream {
 				rawdata = "touch: " + 1;
 			else
 				rawdata = "touch: " + 0;
+		}else if (SensorType.equals("upm_grove.GroveRotary")){
+			rawdata = "Rotary: " + rotary.abs_deg(); // Absolute degrees
+		}else if (SensorType.equals("upm_grove.GroveButton")){
+			rawdata = "Button: "+button.value();
 		} else {
 			logger.error("Do not hava " + SensorType + " sensor");
 		}

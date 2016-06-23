@@ -102,8 +102,8 @@ public class Sensor extends Thread {
 					}
 
 					Date date = Calendar.getInstance().getTime();
-					String currentTimestamp = new SimpleDateFormat(
-							sensorMeta.getTimeFormat()).format(date);
+					logger.debug("Making getTimeFormat: {}", sensorMeta.getTimeFormat());
+					String currentTimestamp = new SimpleDateFormat(sensorMeta.getTimeFormat()).format(date);
 					logger.debug("Making Timestamp: {}", currentTimestamp);
 
 					SensorData sensorData = new SensorData(
