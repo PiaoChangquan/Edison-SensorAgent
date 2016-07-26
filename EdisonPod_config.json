@@ -1,0 +1,127 @@
+{
+    "csnpod_unit": {
+        "admin_cell_phone": "010-7101-6643"
+    },
+    "sensor_unit": {
+        "count": 5,
+        "elements": [
+            {
+                "name": "GroveLight",
+                "type": "single",
+                "SensorType": "upm_grove.GroveLight",
+                "port": 3,
+                "sensors": [
+                    {
+                        "local_id": "Light",
+                        "csn_id": "24833caf",
+                        "time_format": "yyyy-MM-dd HH:mm:ss",
+                        "value_type": "float",
+                        "description": "light"
+                    }
+                 ],
+                "parse_regex": "(\\D*)([0-9]*.[0-9]*)",
+                "parse_target": {
+                    "Light": "2"
+                },
+                "sampling_period": 1
+            },
+            {
+                "name": "GroveTemp",
+                "type": "single",
+                "SensorType": "upm_grove.GroveTemp",
+                "port": 0,
+                "sensors": [
+                    {
+                        "local_id": "Temperature",
+                        "csn_id": "3f66588e",
+                        "time_format": "yyyy-MM-dd HH:mm:ss",
+                        "value_type": "float",
+                        "description": "temperature"
+                    }
+                ],
+                "parse_regex": "(\\D*)([0-9]*.[0-9]*)",
+                "parse_target": {
+                    "Temperature": "2"
+                },
+                "sampling_period": 1
+            },
+            {
+                "name": "GroveTouch",
+                "type": "single",
+                "SensorType": "upm_ttp223.TTP223",
+                "port": 3,
+                "sensors": [
+                    {
+
+                        "local_id": "Touch",
+                        "csn_id": "ttttt88e",
+                        "time_format": "yyyy-MM-dd HH:mm:ss",
+                        "value_type": "float",
+                        "description": "Touch"
+                    }
+                 ],
+                "parse_regex": "(\\D*)([0-9]*.[0-9]*)",
+                "parse_target": {
+                    "Touch": "2"
+                },
+                "sampling_period": 1
+            },
+            {
+                "name": "GroveRotary",
+                "type": "single",
+                "SensorType": "upm_grove.GroveRotary",
+                "port": 3,
+                "sensors": [
+                    {
+
+                        "local_id": "Rotary",
+                        "csn_id": "Rotary88e",
+                        "time_format": "yyyy-MM-dd HH:mm:ss",
+                        "value_type": "float",
+                        "description": "Rotary"
+                    }
+                 ],
+                "parse_regex": "(\\D*)([0-9]*.[0-9]*)",
+                "parse_target": {
+                    "Rotary": "2"
+                },
+                "sampling_period": 1
+            },
+            {
+                "name": "GroveButton",
+                "type": "single",
+                "SensorType": "upm_grove.GroveButton",
+                "port": 2,
+                "sensors": [
+                    {
+
+                        "local_id": "Button",
+                        "csn_id": "Button88e",
+                        "time_format": "yyyy-MM-dd HH:mm:ss",
+                        "value_type": "float",
+                        "description": "Button"
+                    }
+                 ],
+                "parse_regex": "(\\D*)([0-9]*.[0-9]*)",
+                "parse_target": {
+                    "Button": "2"
+                },
+                "sampling_period": 1
+            }
+        ]
+    },
+    "data_unit": {
+        "db_name": "sensor_queue",
+        "stream_name": "stream",
+        "buffer_size": 5,
+        "server_ip": "117.16.146.58",
+        "server_port": 55555,
+        "transfer_period": 1,
+        "max_transfer_cnt_at_once": 5
+    },
+    "comm_unit": {
+        "response_mode": "NUMERIC",
+        "satus_check_period": 60,
+        "comm_type": "ETHERNET"
+    }
+}
